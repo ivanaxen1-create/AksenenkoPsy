@@ -274,21 +274,43 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   margin: -16px 0 32px;
 }
 
-.blog__embed {
+.blog__card {
   width: 100%;
-  max-width: 520px;
-  height: 520px;
+  max-width: 420px;
   border-radius: var(--radius);
-  overflow: hidden;
   border: 1px solid var(--color-border);
-  margin-bottom: 24px;
   background: var(--color-bg-alt);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-.blog__embed iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.blog__card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.blog__card-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.blog__card-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 16px;
 }
 
 /* Cards */
@@ -342,12 +364,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   margin: 0 0 14px;
 }
 
-.price-card__desc { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
+.price-card__desc { margin: 0 0 20px; color: var(--color-text-muted); font-size: 0.95rem; }
 
 /* Contact */
 .contact__inner { text-align: center; }
 
-.contact__lead { color: var(--color-text-muted); margin-bottom: 32px; }
+.contact__lead { color: var(--color-text-muted); margin-bottom: 24px; }
+
+.contact__calendly { margin-bottom: 32px; }
 
 .contact__list {
   display: flex;

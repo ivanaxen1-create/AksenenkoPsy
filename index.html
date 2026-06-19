@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -38,8 +40,8 @@
         <h1>Иван Аксёненко</h1>
         <p class="hero__lead">Помогаю разобраться с тревогой, выгоранием, кризисами и сложностями в отношениях. Работаю в психоаналитическом подходе, онлайн и очно.</p>
         <div class="hero__actions">
-          <a href="https://t.me/Ivan_Anatolyevich" class="btn btn--primary" target="_blank" rel="noopener">Написать в Telegram</a>
-          <a href="tel:+79850605687" class="btn btn--ghost">Позвонить</a>
+          <a href="" class="btn btn--primary js-calendly" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ivan-axen1/30min'}); return false;">Записаться на консультацию</a>
+          <a href="https://t.me/Ivan_Anatolyevich" class="btn btn--ghost" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
       </div>
       <div class="hero__photo">
@@ -123,11 +125,13 @@
   <section id="blog" class="section section--alt">
     <div class="container blog__inner">
       <h2 class="section__title">Блог</h2>
-      <p class="blog__lead">Пишу о тревоге, выгорании и психологии в Telegram-канале — последние записи ниже.</p>
-      <div class="blog__embed">
-        <iframe src="https://t.me/s/Aksenenko_Psy" loading="lazy" title="Telegram-канал Ивана Аксёненко"></iframe>
+      <p class="blog__lead">Пишу о тревоге, выгорании и психологии в Telegram-канале.</p>
+      <div class="blog__card">
+        <div class="blog__card-icon" aria-hidden="true">✦</div>
+        <p class="blog__card-name">Aksenenko_Psy</p>
+        <p class="blog__card-desc">Заметки о тревоге, выгорании, отношениях и психоанализе — простым языком, без терминов.</p>
+        <a href="https://t.me/Aksenenko_Psy" class="btn btn--primary" target="_blank" rel="noopener">Читать канал в Telegram</a>
       </div>
-      <a href="https://t.me/Aksenenko_Psy" class="btn btn--ghost" target="_blank" rel="noopener">Все записи в Telegram</a>
     </div>
   </section>
 
@@ -140,12 +144,14 @@
           <p class="price-card__price">5 000 ₽</p>
           <p class="price-card__meta">за сессию · 50 минут</p>
           <p class="price-card__desc">Видеосвязь, удобно из любой точки мира.</p>
+          <a href="" class="btn btn--ghost btn--small" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ivan-axen1/30min'}); return false;">Записаться</a>
         </div>
         <div class="price-card">
           <h3>Офлайн</h3>
           <p class="price-card__price">7 000 ₽</p>
           <p class="price-card__meta">за сессию · 50 минут</p>
           <p class="price-card__desc">Очная встреча. Формат выбирает клиент.</p>
+          <a href="" class="btn btn--ghost btn--small" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ivan-axen1/30min'}); return false;">Записаться</a>
         </div>
       </div>
     </div>
@@ -154,7 +160,8 @@
   <section id="contact" class="section section--alt">
     <div class="container contact__inner">
       <h2 class="section__title">Связаться со мной</h2>
-      <p class="contact__lead">Напишите или позвоните — договоримся о первой встрече.</p>
+      <p class="contact__lead">Запишитесь онлайн или напишите — договоримся о первой встрече.</p>
+      <a href="" class="btn btn--primary contact__calendly" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ivan-axen1/30min'}); return false;">Выбрать время записи</a>
       <div class="contact__list">
         <a href="https://t.me/Ivan_Anatolyevich" class="contact__item" target="_blank" rel="noopener">
           <span class="contact__label">Telegram</span>
