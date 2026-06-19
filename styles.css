@@ -399,7 +399,13 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
 
 .contact__lead { color: var(--color-text-muted); margin-bottom: 24px; }
 
-.contact__calendly { margin-bottom: 32px; }
+.contact__calendly-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 32px;
+}
 
 .contact__list {
   display: flex;
