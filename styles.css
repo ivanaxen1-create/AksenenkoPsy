@@ -203,6 +203,34 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   padding: 16px 20px;
 }
 
+.badge {
+  display: block;
+  width: fit-content;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 6px;
+}
+
+.diploma-slot {
+  margin-top: 24px;
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+
+.diploma-slot__text {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
 .about__text {
   flex: 1.2;
   min-width: 260px;
