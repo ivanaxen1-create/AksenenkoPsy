@@ -154,6 +154,13 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
 
 .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
+.hero__trust {
+  margin: 20px 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
 .hero__photo { flex: 0 0 auto; display: flex; justify-content: center; }
 
 .avatar-photo {
@@ -164,6 +171,26 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   object-position: center 25%;
   box-shadow: 0 20px 40px rgba(31,59,61,0.18);
   border: 4px solid var(--color-bg-alt);
+}
+
+/* Problem / positioning */
+.problem {
+  background: var(--color-accent-light);
+  padding: 56px 0;
+}
+
+.problem__inner { text-align: center; }
+
+.eyebrow--center { text-align: center; }
+
+.problem__text {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-primary);
 }
 
 /* Sections */
@@ -179,6 +206,14 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
 }
 
 /* About */
+.about__intro {
+  max-width: 640px;
+  margin: -16px auto 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
 .about__content {
   display: flex;
   gap: 48px;
@@ -287,6 +322,62 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   font-weight: 600;
   color: var(--color-accent);
 }
+
+/* Process */
+.process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.process__step { text-align: center; }
+
+.process__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.process__step h3 { font-size: 1.1rem; color: var(--color-primary); }
+
+.process__step p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; }
+
+.process__cta { text-align: center; }
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature { text-align: center; }
+
+.feature__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.feature h3 { font-size: 1.02rem; color: var(--color-primary); margin-bottom: 8px; }
+
+.feature p { color: var(--color-text-muted); font-size: 0.9rem; margin: 0; }
 
 /* Blog / Telegram */
 .blog__inner {
@@ -472,6 +563,8 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   .testimonials { grid-template-columns: 1fr; }
   .about__gallery { flex-direction: column; }
   .about__gallery-img { height: 320px; }
+  .process { grid-template-columns: 1fr; gap: 32px; }
+  .features { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 540px) {
