@@ -78,6 +78,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
 .nav a:hover { color: var(--color-text); }
 
 .header__right {
+  grid-column: 3;
   justify-self: end;
   display: flex;
   align-items: center;
