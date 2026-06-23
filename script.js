@@ -1,5 +1,12 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+document.querySelectorAll("[data-calendly]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    Calendly.initPopupWidget({ url: link.dataset.calendly });
+  });
+});
+
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 
