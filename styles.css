@@ -91,11 +91,15 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
 .burger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  padding: 0;
 }
 
 .burger span {
@@ -112,6 +116,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0 0 16px; line-height: 1.
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 0.95rem;
+  cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
@@ -328,6 +333,7 @@ button:focus-visible {
 
 .testimonial blockquote {
   margin: 0;
+  font-style: italic;
   font-size: 0.97rem;
   color: var(--color-text);
   line-height: 1.65;
@@ -605,4 +611,39 @@ button:focus-visible {
   .hero__text h1 { font-size: 2rem; }
   .cards { grid-template-columns: 1fr; }
   .avatar-photo { width: 180px; height: 180px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* Sticky mobile CTA */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  padding: 12px 16px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 200ms ease;
+}
+
+.sticky-cta.is-visible { transform: translateY(0); }
+
+.sticky-cta .btn {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .sticky-cta { display: block; }
+  .footer { padding-bottom: 84px; }
 }

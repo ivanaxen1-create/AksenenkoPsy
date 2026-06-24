@@ -11,12 +11,28 @@ const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 
 burger.addEventListener("click", () => {
-  nav.classList.toggle("is-open");
+  const isOpen = nav.classList.toggle("is-open");
+  burger.setAttribute("aria-expanded", String(isOpen));
 });
 
 nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => nav.classList.remove("is-open"));
+  link.addEventListener("click", () => {
+    nav.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+  });
 });
+
+const stickyCta = document.getElementById("stickyCta");
+const heroEl = document.querySelector(".hero");
+
+if (stickyCta && heroEl) {
+  const toggleStickyCta = () => {
+    const heroBottom = heroEl.getBoundingClientRect().bottom;
+    stickyCta.classList.toggle("is-visible", heroBottom < 0);
+  };
+  window.addEventListener("scroll", toggleStickyCta, { passive: true });
+  toggleStickyCta();
+}
 
 const emailLink = document.querySelector('a[href^="mailto:"]');
 
